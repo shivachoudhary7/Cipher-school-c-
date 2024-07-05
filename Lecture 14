@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+void printstuff() { 
+    cout << "Writing my first function"; // corrected spelling of "function"
+}
+
+int main() {
+    printstuff(); 
+    return 0; 
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int input;
+
+    for (int i = 1; i < 101; i++) {
+        cout << "Enter a number: ";
+        cin >> input;
+
+        if (input == 65) {
+            cout << "Congrats, you have guessed correctly!" << endl;
+            break; // Exit the loop if the correct number is guessed
+        }
+    }
+
+    return 0;
+}

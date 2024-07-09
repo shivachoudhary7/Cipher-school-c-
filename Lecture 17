@@ -1,0 +1,26 @@
+#include <iostream>
+void printHi() {
+    std::cout << "Hi" << std::endl;
+}
+
+int sum(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    printHi();
+
+    int a, b;
+    int c;
+    a = 4;
+    b = 6;
+    c = 75; 
+
+    int d;
+    d = sum(a, b);
+
+    std::cout << "The sum is equal to " << d << " " << "The value of a is " << a << std::endl;
+    std::cout << "The value of c is " << c << std::endl;
+
+    return 0;
+}

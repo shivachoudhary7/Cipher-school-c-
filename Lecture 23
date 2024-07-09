@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[5];     // Array of 5 integers
+    int *x;       // Pointer to int
+    x = &a[0];    // Pointer x points to the first element of the array
+
+    // Initialize the array for clarity (optional)
+    for (int i = 0; i < 5; ++i) {
+        a[i] = i * 10; // Just an example to give values to the array
+    }
+
+    // Print addresses of each element in the array
+    for (int i = 0; i < 5; ++i) {
+        cout << "Address of a[" << i << "] is " << &a[i] << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+void swap(int &a, int &b) {
+    int c;
+    c = a;
+    a = b;
+    b = c;
+    std::cout << "The values of a and b after swapping inside the function are: " << a << " and " << b << std::endl;
+}
+
+int fun(int &a, int b) {
+    a = 99999;
+    b = 99999;
+    std::cout << "The values of a and b inside fun function are: " << a << " and " << b << std::endl;
+    return a;
+}
+
+int main() {
+    int x = 5;
+    int y = 10;
+
+    std::cout << "The values of x and y before swapping are: " << x << " and " << y << std::endl;
+    swap(x, y);
+    std::cout << "The values of x and y after swapping are: " << x << " and " << y << std::endl;
+
+    int result = fun(x, y);
+    std::cout << "The values of x and y after calling fun are: " << x << " and " << y << std::endl;
+    std::cout << "The result returned by fun is: " << result << std::endl;
+
+    return 0;
+}

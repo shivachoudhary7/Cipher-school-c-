@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath> // For sqrt function
+
+using namespace std;
+
+class Complex {
+private:
+    float real;
+    float img;
+
+public:
+    // Setter method to set the real and imaginary parts
+    void set_parameters(int real, int img) {
+        this->real = real;
+        this->img = img;
+    }
+
+    // Method to calculate and display the square distance from the origin
+    void SqdistancefromOrigin() {
+        float dist;
+        dist = real * real + img * img;
+        cout << "The square distance from origin is " << dist << endl;
+    }
+};
+
+class New_account {
+public:
+    int amount;
+    int days;
+
+    // Initializer method to set initial values
+    void initial() {
+        amount = 0;
+        days = 0;
+    }
+};
+
+int main() {
+    Complex a, b;
+    a.set_parameters(3, 4);
+    a.SqdistancefromOrigin();
+
+    New_account acc;
+    acc.initial();
+
+    return 0;
+}

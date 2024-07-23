@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Truck {
+private:
+    int number_typers;
+    string name;
+    int capacity;
+    int mileage;
+    string school_name;
+
+public:
+    // Method to calculate and display the mileage
+    void calculateMileage() {
+        cout << "The mileage is " << mileage << endl;
+    }
+
+    // Method to print the name of the truck
+    void printNameOfTruck() {
+        cout << "The name of the truck is " << name << endl;
+    }
+
+    // Setter method to initialize truck details
+    void setTruckDetails(int typers, string truckName, int cap, int mile, string school) {
+        number_typers = typers;
+        name = truckName;
+        capacity = cap;
+        mileage = mile;
+        school_name = school;
+    }
+};
+
+class Car {
+private:
+    int number_typers;
+    string name;
+    int capacity;
+    int mileage;
+    int number_airbags;
+    int ac_consumption;
+
+public:
+    // Method to calculate and display the mileage
+    void calculateMileage() {
+        cout << "The mileage is " << mileage << endl;
+    }
+
+    // Setter method to initialize car details
+    void setCarDetails(int typers, string carName, int cap, int mile, int airbags, int acCons) {
+        number_typers = typers;
+        name = carName;
+        capacity = cap;
+        mileage = mile;
+        number_airbags = airbags;
+        ac_consumption = acCons;
+    }
+};
+
+int main() {
+    // Creating an object of Truck
+    Truck truck;
+    truck.setTruckDetails(4, "BigTruck", 10000, 15, "Truck School");
+    truck.calculateMileage();
+    truck.printNameOfTruck();
+
+    // Creating an object of Car
+    Car car;
+    car.setCarDetails(4, "FamilyCar", 5, 20, 6, 3);
+    car.calculateMileage();
+
+    return 0;
+}

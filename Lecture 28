@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Student
+{
+public:
+    string name;
+    int attendance;
+    float total_marks;
+
+    void calculate_percentage() {
+        // Assuming total marks are out of 100 for simplicity
+        float percentage = (total_marks / 100.0f) * 100;
+        cout << "Percentage of " << name << ": " << percentage << "%" << endl;
+    }
+};
+
+int main() {
+    Student a, b, c;
+    
+    a.name = "Rohit";
+    a.attendance = 90;
+    a.total_marks = 69;
+    a.calculate_percentage();
+
+    // Example for other students
+    b.name = "Priya";
+    b.attendance = 95;
+    b.total_marks = 85;
+    b.calculate_percentage();
+
+    c.name = "John";
+    c.attendance = 80;
+    c.total_marks = 75;
+    c.calculate_percentage();
+
+    return 0;
+}
